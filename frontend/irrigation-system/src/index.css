@@ -1,0 +1,211 @@
+*
+*:before,
+*:after {
+    padding: 0;
+    margin: 1PX;
+   
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+header {
+    background-color: #21843b;
+    /* Background color of the header */
+    padding: 20px 0;
+    /* Spacing inside the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e8f6ed;
+    /* Text color */
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.logo img {
+    width: 300px;
+    /* Adjust the width of your logo image */
+    height: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    /* Remove bullet points from the list */
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right:120px;
+    margin-left: 20PX;
+    /* Spacing between navigation links */
+}
+
+nav a {
+
+    box-shadow: inset 0 0 0 0 #ffffff;
+    text-decoration:wavy;
+    color: rgb(255, 255, 255);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+nav a:hover {
+    box-shadow: inset 100px 0 0 0 #d6faa0;
+    color: white;
+    /* Change text color on hover (you can choose any color you like) */
+}
+
+img {
+    position: absolute;
+    position: left;
+    left: 723px;
+    top: 165px;
+    width: 423px;
+    height: 431px;
+
+    float: right;
+
+
+    border-radius: 1300px;
+
+}
+.TXT{
+    margin-left: 22px;
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    width: 522px;
+    font-size: 35px;
+    margin-top: 135px;
+    display: flex;
+    align-items: center;
+    color: #263238;
+}
+
+p {
+    /* Rectangle 233 */
+
+    width: 522px;
+    font-size: 20px;
+    margin-top: 10px;
+    display: flex;
+    left: -4px;
+    background: rgba(193, 221, 235, 0.15);
+}
+
+button {
+    /* Frame 10 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13.0469px 25.0902px;
+    gap: 10.04px;
+    margin-top: 10px;
+
+    width: 163.18px;
+    height: 64px;
+    margin-left: 5px;
+
+    color: #ffffff;
+    background: #008000;
+    border-radius: 10.0361px;
+}
+
+/* -------------------------------login-------------------- */
+ form{
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20%;
+height: 520px;
+width: 400px;
+background-color: rgba(255, 255, 255, 0.13);
+/* position: absolute; */
+ /* transform: translate(-70%,-50%); */
+/* top: 200; */ 
+left: 80%;
+border-radius: 10px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(217, 217, 217, 0.1);
+box-shadow: 0 0 40px rgba(203, 196, 196, 0.6);
+padding: 50px 200px;
+}
+form *{
+font-family: 'Poppins',sans-serif;
+color: #01250d;
+letter-spacing: 0.5px;
+outline: none;
+border: none;
+}
+form h3{
+font-size: 42px;
+font-weight: 500;
+line-height: 42px;
+text-align: center;
+} */
+
+label{
+display: block;
+margin-top: 12px;
+font-size: 16px;
+font-weight: 500;
+}
+input{
+display: block;
+height: 50px;
+width: 100%;
+background-color: rgba(234, 228, 228, 0.07);
+border-radius: 3px;
+padding: 0 10px;
+margin-top: 8px;
+font-size: 14px;
+font-weight: 300;
+}
+::placeholder{
+color: rgb(114, 117, 115);
+}
+.PP{
+   
+    background:#ffffff ;
+}
+.B{
+margin-top: px;
+width: 100%;
+background-color: #ffffff;
+color: #080710;
+/* padding: 15px 0; */
+font-size: 18px;
+font-weight: 600;
+border-radius: 5px;
+cursor: pointer;
+}
+ .social{
+margin-top: 30px;
+display: flex;
+}
+.social div{
+background: red;
+width: 150px;
+border-radius: 3px;
+padding: 5px 10px 10px 5px;
+background-color: rgba(255,255,255,0.27);
+color: #5186ea;
+text-align: center;
+}
+.social div:hover{
+background-color: rgba(66, 63, 63, 0.47);
+}
+.social .fb{
+margin-left: 25px;
+}
+.social i{
+margin-right: 4px;
+} 

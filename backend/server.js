@@ -7,6 +7,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 const sensorRoutes = require('./routes/sensorRoutes');
+const SensorReading =require('./models/sensorReadingModel')
 
 
 app.use(express.json()); // midelware bch t5ali l body mta3 db yetE9ree 
@@ -16,57 +17,53 @@ mongoose.Promise = global.Promise;
 const URI = process.env.URI;
 mongoose.connect(process.env.URI)
 .then(() => {
- console.log('Connection to database!')
+ console.log('Connected to database!')
  })
  .catch(() => {
    console.log('Connection to database failed!')
  })
  app.use('/api', sensorRoutes)
  
-    // Définition du schéma pour les documents dans la collection
-    const schema = new mongoose.Schema({
-      name: String,
-      age: Number,
-      city: String
-    });
-
-    // Création du modèle pour la collection
-    const Person = mongoose.model('Person', schema);
-
-    // Insertion de quelques documents dans la collection
-    const documents = [
-      { name: "John", age: 30, city: "New York" },
-      { name: "Alice", age: 25, city: "Los Angeles" },
-      { name: "Bob", age: 35, city: "Chicago" }
-    ];
-
-    Person.insertMany(documents)
-      .then(result => {
-        console.log(`${result.length} documents insérés avec succès.`);
-      })
-      .catch(error => {
-        console.error("Erreur lors de l'insertion des documents :", error);
-      })
-      app.use(express.json());
+  
 // app.get("/getData",(req ,res)=>{
 
 //  res.send(" youtubeLink")
 // })
-      app.get('/getData', async (req, res) => {
+      app.get('/timestamp', async (req, res) => {
        
-          const data = await  Person.find();
+          const data = await SensorReading.find();
           res.json(data);
       })
-      app.get('/name', async (req, res) => {
+      app.get('/humidity', async (req, res) => {
         try {
-          const irrigationData = await Person.findOne().sort({ _id: -1 });
-          res.json(irrigationData.name);
+          const irrigationData = await  SensorReading.findOne().sort({ _id: -1 });
+          res.json(irrigationData.humidity);
         } catch (error) {
           console.error('Erreur lors de la récupération du niveau d\'humidité du sol:', error);
           res.status(500).send('Une erreur s\'est produite lors de la récupération du niveau d\'humidité du sol.');
         }
       });
-   
+      app.get('/Temperature', async (req, res) => {
+        try {
+          const irrigationData = await  SensorReading.findOne().sort({ _id: -1 });
+          res.json(irrigationData.Temperature);
+        
+        } catch (error) {
+          console.error('Erreur lors de la récupération du niveau d\'humidité du sol:', error);
+          res.status(500).send('Une erreur s\'est produite lors de la récupération du niveau d\'humidité du sol.');
+        }
+      });
+      app.get('/soilHumidity', async (req, res) => {
+        try {
+          const irrigationData = await  SensorReading.findOne().sort({ _id: -1 });
+          res.json(irrigationData.soilHumidity);
+        
+        } catch (error) {
+          console.error('Erreur lors de la récupération du niveau d\'humidité du sol:', error);
+          res.status(500).send('Une erreur s\'est produite lors de la récupération du niveau d\'humidité du sol.');
+        }
+      });
+      
 
  
 module.exports = app;
@@ -76,9 +73,45 @@ module.exports = app;
  });
  
 app.use('/api', sensorRoutes)
+// api for login 
+const userSchema = new mongoose.Schema({
+  email: String,
+  password: String
+});
+
+// Create a model
+const User = mongoose.model('User', userSchema);
+const mail = [
+  { email:"benrefifanesrine@gmail.com" , password:"aaa" },
+ 
 
 
+];
 
+User.insertMany(mail)
+  .then(result => {
+    console.log(`${result.length} documents insérés avec succès.`);
+  })
+  .catch(error => {
+    console.error("Erreur lors de l'insertion des documents :", error);
+  })
+
+// Login route
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.findOne({ email, password });
+    if (user) {
+      res.status(200).json("exist");
+    } else {
+      res.status(404).json("notexist");
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json("error");
+  }
+});
 
 
    const PORT = process.env.PORT ;

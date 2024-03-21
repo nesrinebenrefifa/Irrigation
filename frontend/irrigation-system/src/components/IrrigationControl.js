@@ -14,16 +14,16 @@ function IrrigationControl() {
   };
 
   return (
-    <div>
+    <div className='control'>
       <h2>Irrigation Control</h2>
       <label>
-        Action:
+       Pump
         <select value={action} onChange={(e) => setAction(e.target.value)}>
           <option value="on">On</option>
           <option value="off">Off</option>
         </select>
       </label>
-      <button onClick={handleControlClick}>Control</button>
+      <button className='controlB' onClick={handleControlClick}>Control</button>
     </div>
   );
 }

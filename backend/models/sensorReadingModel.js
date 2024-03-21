@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = new mongoose.Schema({
   sensorId: String,
-  temperature: Number,
+  Temperature: Number,
   humidity: Number,
   soilHumidity: Number,
   timestamp: { type: Date, default: Date.now }
@@ -12,9 +12,10 @@ const SensorReading = mongoose.model('SensorReading', Schema);
 
     // Insertion de quelques documents dans la collection
     const documents = [
-      { sensorId: "John",  humidity: 30,soilHumidity: "300" },
-      { name: "Alice", age: 25, city: "Los Angeles" },
-      { name: "Bob", age: 35, city: "Chicago" }
+      { sensorId: "1",  humidity: 30,soilHumidity: "300", Temperature: 24 },
+      { sensorId: "2",  humidity: 30,soilHumidity: "500",Temperature:24 },
+      { sensorId: "3",  humidity: 200,soilHumidity: "700",Temperature:24  }
+   
     ];
 
     SensorReading.insertMany(documents)

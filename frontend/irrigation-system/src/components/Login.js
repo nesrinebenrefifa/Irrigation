@@ -16,21 +16,22 @@ function Login() {
 
         try{
 
-            await axios.post("http://localhost:3001/",{
+            await axios.post("http://localhost:3001/login",{
                 email,password
             })
             .then(res=>{
                 if(res.data==="exist"){
-                    history("/home",{state:{id:email}})
+                    history("/Dashbord",{state:{id:email}})
                 }
                 else if(res.data==="notexist"){
                     alert("User have not sign up")
                 }
             })
             .catch(e=>{
-                alert("wrong details")
+                alert("wrong details ")
                 console.log(e);
             })
+          
 
         }
         catch(e){
@@ -50,7 +51,7 @@ function Login() {
                 <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
                 <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password"  />
 
-                <button className="B"  type="submit" onClick={submit}>Log In</button>
+                <button className="B"  type="submit" onClick={submit}>  Log in</button>
         <div class="social">
           <div class="go"><i class="bi bi-google"></i> Google</div>
           <div class="fb"><i class="bi bi-facebook"></i> Facebook</div>

@@ -1,6 +1,7 @@
 import React  ,{useEffect,useState}from "react";
 import axios from "axios";
 import Dashbord from "./Dashbord";
+import Moisturechart from "./Moisturechart";
 
 
 function Moisturevalue() {
@@ -29,16 +30,16 @@ return (
   <Dashbord/>
       <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
         <div>
-         <h2> Moisturevalue</h2>
+         <h2>  <i className="bi bi-moisture p-3 fs-1"></i>Moisture value</h2>
           <h3 className="fs-2">{data} </h3>
         </div>
-        <i className="bi bi-moisture p-3 fs-1"></i>
+       
         {message && (
       <div className="message">
         {message}
       </div>
     )}
-      
+      <Moisturechart/>
       </div></div>
 
 )

@@ -1,6 +1,7 @@
 import React  ,{useEffect,useState}from "react";
 import axios from "axios";
 import Dashbord from "./Dashbord";
+import Humiditychart from "./humiditychart";
 
 function Humidity() {
     const [data, setData] = useState([]);
@@ -20,11 +21,12 @@ function Humidity() {
         <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
           <div>
             <h3 className="fs-2">{data} </h3>
-            Humidity
+           
+            <h2> <i className="bi bi-moisture p-3 fs-1"></i>Humidity</h2>
+          <Humiditychart/>
           </div>
-          <i className="bi bi-moisture p-3 fs-1"></i>
         </div>
-
+     
        
       </div>
    

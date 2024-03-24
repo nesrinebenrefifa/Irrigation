@@ -12,6 +12,8 @@ const HO = () => {
     <div className='TXT'>
     <h1>Invest in Farms with Ease, Seamlessly Connecting You to Agriculture.</h1>
     <p className="RR">Invest confidently in the agriculture industry. Explore our platform, find exciting farm investment opportunities, and enjoy the benefits of a thriving sector. Start growing your wealth through agricultural investments today.</p>
-    <button className="BUTTON"> <Link to="/">Get Started</Link></button></div>
+    <Link to="/">
+      <button className="BUTTON">Get Started</button>
+    </Link></div>
     </div>)}
 export default HO;

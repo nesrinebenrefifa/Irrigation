@@ -9,6 +9,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Humidity from "./components/humidity";
 import Temperature from "./components/Temperature";
 import Moisturevalue from "./components/Moisturevalue";
+import History from "./components/History";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/humidity" element={<Humidity />} />
           <Route path="/Moisturevalue" element={<Moisturevalue />} />
           <Route path="/Temperature" element={<Temperature />} />
+          <Route path="/History" element={<History />} />
+
         </Routes>
       </BrowserRouter>
     </div>

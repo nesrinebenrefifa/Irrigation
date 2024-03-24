@@ -43,8 +43,6 @@ function Login() {
     return (
         <div>
 
-        
-
             <form id="log" action="POST">
           
             <h3>Login Here</h3>

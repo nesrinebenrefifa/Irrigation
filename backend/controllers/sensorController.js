@@ -3,8 +3,8 @@ const SensorReading = require('../models/sensorReadingModel');
 // Fonction pour enregistrer une nouvelle lecture de capteur
 exports.createSensorReading = async (req, res) => {
   try {
-    const { sensorId, temperature, humidity, soilHumidity } = req.body;
-    const reading = new SensorReading({ sensorId, temperature, humidity, soilHumidity });
+    const {  temperature, humidity, soilHumidity } = req.body;
+    const reading = new SensorReading({  temperature, humidity, soilHumidity });
     await reading.save();
     res.status(201).json({ message: 'Lecture de capteur enregistrée avec succès' });
   } catch (err) {

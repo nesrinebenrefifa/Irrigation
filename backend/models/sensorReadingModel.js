@@ -12,9 +12,9 @@ const SensorReading = mongoose.model('SensorReading', Schema);
 
     // Insertion de quelques documents dans la collection
     const documents = [
-      {   humidity: 30,soilHumidity: "300", Temperature: 24 },
-      {   humidity: 30,soilHumidity: "500",Temperature:24 },
-      {  humidity: 270,soilHumidity: "800",Temperature:24  }
+      {   humidity: 30,soilHumidity: "300", Temperature: 13 },
+      {   humidity: 30,soilHumidity: "500",Temperature:23 },
+      {  humidity: 23,soilHumidity: "800",Temperature:24  }
    
     ];
 

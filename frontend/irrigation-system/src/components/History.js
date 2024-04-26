@@ -1,4 +1,5 @@
 import React from 'react';
+import Dashbord from './Dashbord';
 
 const History = () => {
   // Dummy data for irrigation history
@@ -10,7 +11,9 @@ const History = () => {
   ];
 
   return (
+    
     <div className='hist'>
+       <Dashbord/>
       <h2>Irrigation History</h2>
       <table>
         <thead>

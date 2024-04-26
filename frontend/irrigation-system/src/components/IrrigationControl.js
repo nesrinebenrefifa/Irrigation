@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import api from '../services/api';
+import Dashbord from './Dashbord';
 
 function IrrigationControl() {
   const [action, setAction] = useState('');
@@ -14,8 +15,11 @@ function IrrigationControl() {
   };
 
   return (
-    <div className='control'>
-      <h2>Irrigation Control</h2>
+    <div className='z'>
+    
+    <Dashbord/>
+    <div   className='control' >
+      <h2 >Irrigation Control</h2>
       <label>
        Pump
         <select value={action} onChange={(e) => setAction(e.target.value)}>
@@ -24,6 +28,7 @@ function IrrigationControl() {
         </select>
       </label>
       <button className='controlB' onClick={handleControlClick}>Control</button>
+    </div>
     </div>
   );
 }

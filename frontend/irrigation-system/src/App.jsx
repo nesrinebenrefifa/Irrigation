@@ -10,6 +10,7 @@ import Humidity from "./components/humidity";
 import Temperature from "./components/Temperature";
 import Moisturevalue from "./components/Moisturevalue";
 import History from "./components/History";
+import KTIBA from "./components/KTIBA";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <Route path="/HO" element={<HO />} />
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/Dashbord" element={<Dashbord />} />
+          {/* <Route path="/Dashbord" element={<Dashbord />} /> */}
+          <Route path="/Dashbord" element={<KTIBA/>} />
           <Route path="/IrrigationControl" element={<IrrigationControl />} />
           <Route path="/humidity" element={<Humidity />} />
           <Route path="/Moisturevalue" element={<Moisturevalue />} />

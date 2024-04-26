@@ -232,7 +232,7 @@ margin-right: 4px;
     font-style: normal;
     font-size: 35px;
     color: #263238;
-    margin-top: 140px;
+    margin-top: 90px;
     text-align: center;
    
     justify-content: center;
@@ -240,7 +240,7 @@ margin-right: 4px;
     
 }
 .controlB{
-    margin-left: 540px;
+    margin-left: 620px;
     background: green;
     margin-top: 15px;
 
@@ -318,6 +318,16 @@ table tr:nth-child(even) {
  table td.failed {
     color: red;
   }
-  
+  .cap{
+    width: 10Opx;
+    height: 170px;
+   
+    margin-top: 200px;
+   justify-content: center;
+   left: 400px;
+  }
+  .z{
+    margin-top:50px
+  }
     
 

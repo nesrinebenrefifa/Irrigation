@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import KTIBA from "./KTIBA";
+
 
 
 
@@ -66,7 +68,8 @@ function Dashbord() {
         </Menu>
       </Sidebar>
      
-    <h2>This is the admin Dashboard for the irrigation system</h2> 
+    
+  
     
     </>
   );
